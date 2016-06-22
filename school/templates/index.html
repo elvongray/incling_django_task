@@ -1,0 +1,36 @@
+{% load staticfiles %}
+
+<!doctype html>
+<html lang="en" ng-app="schoolApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.css">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <title>{% verbatim %}Classroom{% endverbatim %}</title>
+  </head>
+  <body>
+
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand">Incling High</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container" ng-view></div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-resource.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.js"></script>
+  <!-- custom modules -->
+  <script src="{% static 'js/app.module.js' %}"></script>
+  <script src="{% static 'js/app.config.js' %}"></script>
+   <script src="{% static 'js/app.service.js' %}"></script>
+
+  <script src="{% static 'js/classroom-list/classroom-list.module.js' %}"></script>
+  <script src="{% static 'js/classroom-list/classroom-list.component.js' %}"></script>
+  <!-- end of custom modules -->
+</html>
