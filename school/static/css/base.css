@@ -19,3 +19,13 @@ body {
   font-size: 25px;
   color: #FFF;
 }
+
+.thumbnail .caption {
+  text-align: center;
+}
+
+header {
+  background-color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+}

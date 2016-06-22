@@ -1,12 +1,16 @@
 <div class="row">
-  <div class="col-lg-4 col-sm-6" ng-repeat="classroom in $ctrl.classrooms">
-    <a href="">
-      <p>
-        <img src="{% static 'img/class-image.jpg' %}" class="img-responsive">
-      </p>
-    </a>
-    <div class="caption">
-      <h3>Campers</h3>
+  <div class="col-lg-3 col-sm-6" ng-repeat="classroom in $ctrl.classrooms">
+    <div class="thumbnail">
+      <a href="">
+        <p>
+          <img src="static/img/class-image.jpg" class="img-responsive">
+        </p>
+      </a>
+      <div class="caption">
+        <h3>{{classroom.name}}</h3>
+        <p>{{classroom.classroom_students.length}} student(s)</p>
+        <a href="#/classrooms/{{classroom.id}}" class="btn btn-default">Go to class</a>
+      </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,22 @@
+<div class="row">
+  <header>
+    <div class="container">
+      <h1>Class Name: {{$ctrl.classroom.name}}</h1>
+    </div>
+  </header>
+  <div class="col-lg-3 col-sm-6" ng-repeat="student in $ctrl.classroom.classroom_students">
+    <div class="thumbnail">
+      <a href="">
+        <p>
+          <img src="static/img/student-image.png" class="img-responsive">
+        </p>
+      </a>
+      <div class="caption">
+        <h3>{{student.name}}</h3>
+        <p>Gender: {{student.gender === 'm' ? 'Male' : 'Female'}}</p>
+        <p>Date of birth: {{student.date_of_birth}}</p>
+        <p>Address: {{student.address}}</p>
+      </div>
+    </div>
+  </div>
+</div>

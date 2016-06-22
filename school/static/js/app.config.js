@@ -5,8 +5,8 @@ angular.
       when('/classrooms', {
         template: '<classroom-list></classroom-list>'
       }).
-      when('/classrooms/:classroomsId', {
-        template: '<classroom-list></classroom-list>'
+      when('/classrooms/:classroomId', {
+        template: '<classroom-detail></classroom-detail>'
       }).
       otherwise('/classrooms');
   }]);
